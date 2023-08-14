@@ -1,16 +1,26 @@
 import React from "react";
+import './content.styles.css'
+import PanelCard from "./PanelCard";
 
 const Panel = (props) => {
     return(
-        <h1 style={{ position: "absolute",
+        <div
+        className="the-panel" 
+        style={{ position: "absolute",
         right: "0",
-        backgroundColor: "skyblue",
         fontSize: "1.5rem",
         height: "100vh",
         width: "30vw",
-        zIndex: "10000"}}>
+        zIndex: "10000",
+        animation: "0.5s ease-out 0s 1 slideIn"
+        }}
+        >
+        <h3>
             {props.text}
-        </h1>
+        </h3>
+        <input/>
+        <PanelCard/>
+        </div>
     )
 }
 

@@ -60,6 +60,8 @@ function createButton() {
         // pop open the side panel
         let panel_root = document.createElement('div')
         panel_root.id = 'panel-root'
+        // panel_root.style.cssText = "position:absolute;right:0;width:30vw;backgroundColor:white;"
+        // panel_root.style.animation = "right-to-left 10s linear forwards"
         // panel_root.style.display = 'none'
         body_root.prepend(panel_root)
         const root = createRoot(panel_root)
