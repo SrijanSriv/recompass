@@ -1,25 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import './content.styles.css'
-import PanelCard from "./PanelCard";
+// import Chat from "../../../app/page";
 
-const Panel = (props) => {
+const Panel = () => {
+    const [panelClass, setPanelClass] = useState(false)
+    function handleSetPanelClass() {
+        if (panelClass === true) {
+            setPanelClass(false)   
+        } else {
+            setPanelClass(true)
+        }
+    }
     return(
         <div
-        className="the-panel" 
+        className= "the-panel"
         style={{ position: "absolute",
         right: "0",
         fontSize: "1.5rem",
         height: "100vh",
         width: "30vw",
         zIndex: "10000",
-        animation: "0.5s ease-out 0s 1 slideIn"
+        animation: `${panelClass ? '0.5s slideOut forwards' :'0.5s ease-out 0s 1 slideIn'}`
         }}
         >
-        <h3>
-            {props.text}
-        </h3>
-        <input/>
-        <PanelCard/>
+            <div
+            style={{
+                transform: "translate(-50px, 0)",
+                width: "100px",
+                height: "50px",
+                backgroundColor: "lavender"
+            }}
+            onClick={handleSetPanelClass}
+            >
+                bookmark
+            </div>
+            <button onClick={handleSetPanelClass}>click to remove</button>
+            {/* <Chat/> */}
         </div>
     )
 }

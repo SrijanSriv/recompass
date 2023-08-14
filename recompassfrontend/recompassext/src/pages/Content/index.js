@@ -8,6 +8,11 @@ const compass_button = createButton()
 const input_div = document.querySelector('._2x2Mmc')
 const button_parent = document.querySelector('._1sFryS')
 const body_root = document.querySelector('#container')
+let panel_exists = false
+let panel_root = document.createElement('div')
+panel_root.id = 'panel-root'
+body_root.prepend(panel_root)
+const root = createRoot(panel_root)
 // only for home page. TODO: create an else for null condition
 input_div.append(compass)
 button_parent.append(compass_button)
@@ -58,14 +63,13 @@ function createButton() {
     compass_button.style.cssText = 'border:1px black solid'
     compass_button.addEventListener('click', () => {
         // pop open the side panel
-        let panel_root = document.createElement('div')
-        panel_root.id = 'panel-root'
-        // panel_root.style.cssText = "position:absolute;right:0;width:30vw;backgroundColor:white;"
-        // panel_root.style.animation = "right-to-left 10s linear forwards"
-        // panel_root.style.display = 'none'
-        body_root.prepend(panel_root)
-        const root = createRoot(panel_root)
-        root.render(<RecommPanel text={"button pressed"} />)
+        if (!panel_exists) {
+            panel_exists = true
+            // panel_root.style.cssText = "position:absolute;right:0;width:30vw;backgroundColor:white;"
+            // panel_root.style.animation = "right-to-left 10s linear forwards"
+            // panel_root.style.display = 'none'
+            root.render(<RecommPanel text={"button pressed"} />)
+        }
     })
 
     return compass_button
