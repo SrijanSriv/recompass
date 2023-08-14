@@ -2,6 +2,7 @@
 
 # dependencies
 recompassfrontend/recompassext/node_modules
+recompassmodel/node_modules
 
 # testing
 recompassfrontend/recompassext/coverage
@@ -19,6 +20,7 @@ recompassfrontend/recompassext/.env.development.local
 recompassfrontend/recompassext/.env.test.local
 recompassfrontend/recompassext/.env.production.local
 recompassfrontend/recompassext/.history
+recompassmodel/.next
 
 # secrets
 recompassfrontend/recompassext/secrets.*.js
