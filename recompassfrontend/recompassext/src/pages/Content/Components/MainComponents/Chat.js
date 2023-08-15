@@ -10,7 +10,9 @@ import UploadIcon from '@mui/icons-material/Upload';
 const Chat = () => {
   return (
     <div id="inside-chat">
-      <div id=" chat-show">chat</div>
+      <div id=" chat-show">
+
+      </div>
       <div id="input-chat">
         <div>
           <Paper

@@ -5,6 +5,13 @@ import Chat from './MainComponents/Chat'
 const Main = () => {
   return (
     <div id="main_component" >
+      <h3
+      style={{
+        textAlign: 'center',
+      }}
+      >
+        How can we help 👀
+      </h3>
       <div id="header-component">
         <Headers />
       </div>

@@ -21,7 +21,7 @@ const Headers = () => {
             <MenuIcon />
           </IconButton>
         </div>
-        <div className="Title"> Recompass </div>
+        <div className="Title"> ReCompass 🧭 </div>
         <div>
           <IconButton
             color="primary"
