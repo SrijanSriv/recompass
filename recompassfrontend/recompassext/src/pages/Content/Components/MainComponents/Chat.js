@@ -105,6 +105,9 @@ const Chat = () => {
       </div>
       <div id="input-chat">
         <div>
+          <div
+            style={{ width: '100%', height: '1px', backgroundColor: '#bdbdbd' }}
+          ></div>
           <Paper
             component="form"
             sx={{
@@ -112,13 +115,17 @@ const Chat = () => {
               display: 'flex',
               alignItems: 'center',
               width: '100%',
+              boxShadow: 'none',
             }}
             onSubmit={handleSubmit}
           >
             <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
               <KeyboardVoiceIcon />
             </IconButton>
-            <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+            <Divider
+              sx={{ height: 28, m: 0.5, borderColor: '#bdbdbd' }}
+              orientation="vertical"
+            />
             <InputBase
               sx={{ ml: 1, flex: 1 }}
               value={val}
@@ -126,11 +133,17 @@ const Chat = () => {
               placeholder="Send a message"
               inputProps={{ 'aria-label': 'Send a message' }}
             />
-            <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+            <Divider
+              sx={{ height: 28, m: 0.5, borderColor: '#bdbdbd' }}
+              orientation="vertical"
+            />
             <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
               <SearchIcon onClick={handleSubmit} />
             </IconButton>
-            <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+            <Divider
+              sx={{ height: 28, m: 0.5, borderColor: '#bdbdbd' }}
+              orientation="vertical"
+            />
             <IconButton sx={{ p: '10px' }} aria-label="directions">
               <UploadIcon />
             </IconButton>
