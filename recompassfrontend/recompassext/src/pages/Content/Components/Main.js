@@ -1,6 +1,6 @@
 import React from 'react'
 import Headers from './MainComponents/Headers'
-import SliderBar from './MainComponents/SliderBar'
+// import SliderBar from './MainComponents/SliderBar'
 import Chat from './MainComponents/Chat'
 const Main = () => {
   return (

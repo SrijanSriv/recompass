@@ -1,11 +1,14 @@
+/* Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Work+Sans:wght@300&display=swap');
+
+
 #slide_pannel{
-    position: absolute;
+    position: fixed;
     right: 0;
     font-size: 1.5rem;
     height: auto;
     width: 30vw;
     z-index: 10000;
-    
 }
 
 .the-panel {
@@ -36,6 +39,9 @@
     background-color: white;
     padding: 0rem 0rem 1rem 0rem;
     height: 99vh;
+    z-index: 10003;
+    /* position: fixed; */
+    /* margin-top: 1rem; */
 }
 #header-component{
     /* grid-row-start: 1;
@@ -47,10 +53,10 @@
 #chat-component{
     /* grid-row-start: 2;
     grid-row-end: 3; */
-    height:1000px;
+    /* height:1000px; */
 }
 
-#inside-chat{
+#inside-chat1{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,17 +68,107 @@
     height: 83vh;
     width: 100%;
     padding: 0 10px;
+    /* position: relative; */
 
 }
 
 #input-chat{
     height: 50px;
+    /* position: absolute; */
 }
 
 #chat-show{
     height: auto;
+    min-height: 500px;
     max-height: 500px;
+    overflow-y:scroll;
+    /* background-color: pink; */
+    font-size: 1rem;
+    /* position: absolute; */
 }
+
+
+/* chat bubble design */
+
+/* ============================== */
+
+.bubble {
+  --r: 25px; /* the radius */
+  --t: 40px; /* the size of the tail */
+  margin:0.7rem 0  ;
+  max-width: 300px;
+  padding: calc(2*var(--r)/3);
+  -webkit-mask: 
+    radial-gradient(var(--t) at var(--_d) 0,#0000 98%,#000 102%) 
+      var(--_d) 100%/calc(100% - var(--r)) var(--t) no-repeat,
+    conic-gradient(at var(--r) var(--r),#000 75%,#0000 0) 
+      calc(var(--r)/-2) calc(var(--r)/-2) padding-box, 
+    radial-gradient(50% 50%,#000 98%,#0000 101%) 
+      0 0/var(--r) var(--r) space padding-box;
+  color: #fff;
+}
+
+/* chat bot message design */
+.left {
+  --_d: 0%;
+  border-left: var(--t) solid #0000;
+  margin-right: var(--t);
+  place-self: start;
+  background: #e0e0e0  ;
+  /* padding: 10px; */
+  font-size: 0.9rem;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+/* user message design */
+.right {
+  --_d: 100%;
+  border-right: var(--t) solid #0000;
+  margin-left: var(--t);
+  place-self: end;
+  background:  #42a5f5;
+  /* padding: 10px; */
+  font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  gap: 20px;
+  font-family: system-ui, sans-serif;
+  font-size: 20px;
+  
+}
+
+
+/* bookmard design */
+
+#bookmark{
+  position: absolute;
+  transform: translate(-60px, 50vh);
+  width: 50px;
+  padding: 10px;
+  background-color: rgba(41, 182, 246, 0.9);
+  filter:blur(0.5px);
+  -webkit-filter:blur(0.5px);
+  text-align: center;
+  cursor:pointer;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+
+}
+
+
+
+/* ======================================= */
+
 
 /* navabar design */
 

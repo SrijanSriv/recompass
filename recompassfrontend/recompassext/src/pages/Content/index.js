@@ -5,26 +5,26 @@ import { createRoot } from 'react-dom/client';
 const compass = createCompass()
 const compass_button = createButton()
 
-let input_div = document.querySelector('._2x2Mmc')
+// let input_div = document.querySelector('._2x2Mmc')
 
 // if(input_div==null){
-    // let input_div = document.querySelector('._1MRYA1');
+    let input_div = document.querySelector('._1MRYA1');
     
 // }
 
-let button_parent = document.querySelector('._1sFryS')
+// let button_parent = document.querySelector('._1sFryS')
 // if(button_parent==null){
-//   let button_parent = document.querySelector('._1cmsER');
+  let button_parent = document.querySelector('._1cmsER');
 // }
 const body_root = document.querySelector('#container')  
 // only for home page. TODO: create an else for null condition
 input_div.append(compass)
 button_parent.append(compass_button)
 
-let formdiv = document.querySelector('.Pke_EE')
+// let formdiv = document.querySelector('.Pke_EE')
 
 // if(formdiv==null){
-    // let formdiv = document.querySelector('._3704LK');
+    let formdiv = document.querySelector('._3704LK');
 // }
 
 formdiv.addEventListener('keydown', executePrompt)
