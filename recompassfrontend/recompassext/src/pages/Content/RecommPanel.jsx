@@ -25,8 +25,3 @@ const Panel = (props) => {
 
 export default Panel;
 
-
-/*
-
-
-*/

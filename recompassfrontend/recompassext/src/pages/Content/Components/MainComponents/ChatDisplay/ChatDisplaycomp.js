@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
-
+import React from 'react'
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 import ContentLoader from 'react-content-loader'
 
@@ -24,7 +25,14 @@ const ChatDisplaycomp = (props) => {
       )}
       {props.role === 'assistant' ? (
         <div className="bubble left">
-          <p>{props.content}</p>
+          <ReactMarkdown
+            className="prose"
+            children={props.content}
+            remarkPlugins={[remarkGfm]}
+            components={{
+                a: ({node, ...props}) => <a style={{color: 'blue'}} {...props} />             
+            }}
+          ></ReactMarkdown>
         </div>
       ) : (
         <div></div>
