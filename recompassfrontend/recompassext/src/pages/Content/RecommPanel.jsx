@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './content.styles.css';
 import Main from './Components/Main';
 import MoreIcon from '@mui/icons-material/More';
-import index from "../../../vectordb/pinecone"
+
 const Panel = (props) => {
   const [panelClass, setPanelClass] = useState(false);
   return (
@@ -19,7 +19,6 @@ const Panel = (props) => {
         <MoreIcon sx={{ color: 'white' }} />
       </div>
       <Main />
-      <index />
     </div>
   );
 };

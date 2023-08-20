@@ -1,7 +1,6 @@
 {
   "name": "recompass",
   "version": "1.0.0",
-  "type":"module",
   "description": "A new way of shopping online",
   "license": "MIT",
   "repository": {

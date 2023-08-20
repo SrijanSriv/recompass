@@ -30,7 +30,9 @@ const ChatDisplaycomp = (props) => {
             children={props.content}
             remarkPlugins={[remarkGfm]}
             components={{
-                a: ({node, ...props}) => <a style={{color: 'blue'}} {...props} />             
+              a: ({ node, ...props }) => (
+                <a style={{ color: 'blue' }} {...props} />
+              ),
             }}
           ></ReactMarkdown>
         </div>
@@ -42,3 +44,15 @@ const ChatDisplaycomp = (props) => {
 }
 
 export default ChatDisplaycomp
+
+/* 
+
+<ReactMarkdown
+            className="prose"
+            children={props.content}
+            remarkPlugins={[remarkGfm]}
+            components={{
+                a: ({node, ...props}) => <a style={{color: 'blue'}} {...props} />             
+            }}
+          ></ReactMarkdown>
+*/

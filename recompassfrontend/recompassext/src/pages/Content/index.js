@@ -14,7 +14,8 @@ const compass_button = createButton()
 
 // let button_parent = document.querySelector('._1sFryS')
 // if(button_parent==null){
-  let button_parent = document.querySelector('._1cmsER');
+//   let button_parent = document.querySelector('._1cmsER');
+  let button_parent = document.querySelector('._2oO9oE');
 // }
 const body_root = document.querySelector('#container')  
 // only for home page. TODO: create an else for null condition
@@ -66,10 +67,20 @@ function createCard(color) {
 }
 
 function createButton() {
-    let compass_button = document.createElement('button')
+    let compass_button = document.createElement('div')
+    compass_button.style.cssText ='border:1px black solid; width:40px; height:40px;';
+    let compass_button_image = document.createElement('img')
 
-    compass_button.innerHTML = "clever"
-    compass_button.style.cssText = 'border:1px black solid'
+    compass_button.id = "the-button"
+    compass_button_image.width = 40
+    compass_button_image.height = 40
+    compass_button_image.title = "Recompass Search"
+    compass_button_image.src ='https://user-images.githubusercontent.com/79690889/261814644-6507bd19-6245-4c96-b820-bdd9ccea7235.gif';
+    
+    compass_button_image.alt = 'buttnn';
+    compass_button.appendChild(compass_button_image);
+
+    // compass_button.style.cssText = 'border:1px black solid'
     compass_button.addEventListener('click', () => {
         // pop open the side panel
         let panel_root = document.createElement('div')
